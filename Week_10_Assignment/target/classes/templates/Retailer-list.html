@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- <ul th:each="Retailer : ${RetailerList}">
+        <li class="align-middle" th:text="${Retailer.name}"></li>
+    </ul> -->
+List of Retailers (count:
+<span th:text="${RetailersList.size}" />)
+<table border=1>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Years of Experience</th>
+	</tr>
+	<tr th:each="Retailer : ${RetailersList}">
+		<td class="align-middle" th:text="${Retailer.name}"></td>
+		<td class="align-middle" th:text="${Retailer.age}"></td>
+		<td class="align-middle" th:text="${Retailer.yearsOfExperience}"></td>
+	</tr>
+</table>
+
+</html>

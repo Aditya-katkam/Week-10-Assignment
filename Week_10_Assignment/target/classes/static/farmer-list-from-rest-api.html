@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+Farmer List:
+<script>
+
+    // "/api/farmer/list" returns a JSON array object
+
+    fetch("/api/Retailers/list")
+        .then(response => response.json())
+        .then(
+            response => response.map(Retailers => document.write(`<li> ${Retailers.name} </li>`))
+        );
+
+</script>
+
+</html>
